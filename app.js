@@ -6,6 +6,7 @@ let currentPlayer="X"
 const sqrs = document.querySelectorAll('.sqr')
 const boards = document.querySelector('.board')
 let message = document.querySelector('#message')
+let resety = document.querySelector('#reset-button')
 /*----------------------------- Event Listeners -----------------------------*/
 sqrs.forEach(function(box) {
     box.addEventListener('click', function(){
@@ -18,7 +19,23 @@ sqrs.forEach(function(box) {
             currentPlayer = 'X'
         }
     }
-}
+        message.textContent = `It's ${currentPlayer}'s Turn`
+    resety.addEventListener('click', function() {
+    currentPlayer = 'X'
+    sqrs.forEach(function(box) {
+        box.textContent = ''
+    
+    message.textContent = `It's ${currentPlayer}'s Turn`
+// message.textContent = `It's ${currentPlayer}'s turn`
+// }
+// resety.addEventListener('click', function(){
+//     currentPlayer = ''
+//     box.textContent = currentPlayer
+
+// })
+    }
+    
 )})
 
+    })})
 /*-------------------------------- Functions --------------------------------*/
